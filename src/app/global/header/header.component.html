@@ -1,3 +1,10 @@
-<p>
-  header works!
-</p>
+<div class="horizontal-flex wrap" id="navbar" *ngIf="showHeader()">
+  <div class="vertical-flex">
+    <h1>Catch - Chicago</h1>
+    <h4>Catch the Best Deals in Town</h4>
+  </div>
+  <div class="horizontal-flex reverse">
+    <a routerLink="/signup" class="nav-link signup no-underline">SignUp</a>
+    <a routerLink="/login" class="nav-link login no-underline">Login</a>
+  </div>
+</div>

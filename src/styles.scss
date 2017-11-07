@@ -1,1 +1,190 @@
-/* You can add global styles to this file, and also import other style files */
+/* General styles */
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.wrap {
+  padding: 0 10vw;
+}
+
+.horizontal-flex {
+  display: flex;
+  align-items: center;
+
+  &.reverse {
+    flex-direction: row-reverse;
+  }
+}
+
+.vertical-flex {
+  display: flex;
+  flex-direction: column;
+}
+
+.text-centered {
+  text-align: center;
+  margin: auto;
+}
+
+p, a, input, input::placeholder {
+  font-size: 17px;
+  font-family: 'Lato', sans-serif;
+}
+
+a {
+  color: #2980b9;
+}
+
+a.no-underline {
+  text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+}
+
+/* Inputs and other form elements */
+
+fieldset {
+  border: none;
+  position: relative;
+  padding-top: 10px;
+
+  &.material-input {
+    .bar  { position:relative; display:block; width:300px; }
+    .bar:before, .bar:after   {
+      content:'';
+      height:2px;
+      width:0;
+      bottom:1px;
+      position:absolute;
+      background:#47d97a;
+      transition:0.2s ease all;
+    }
+    .bar:before {
+      left:50%;
+    }
+    .bar:after {
+      right:50%;
+    }
+  }
+}
+
+input {
+  border: none;
+  border-radius: 5px;
+  height: 50px;
+  padding: 0 20px;
+  color: #007EBC;
+
+  &.material-input {
+    border-radius: 0;
+    margin: 5px 0;
+    border-bottom: 2px solid #e9e9e9;
+
+    &:focus  {
+
+      border-bottom: none;
+
+      & ~ .bar:before, & ~ .bar:after {
+        width:50%;
+      }
+    }
+
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
+
+input.has-icon {
+  padding-left: 40px;
+}
+
+input::placeholder {
+  color: #b0b0b0;
+  line-height: 50px;
+}
+
+label.icon {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 20px;
+  display: flex;
+  align-items: center;
+}
+
+/* Z-Depths Based On Material Guidelines */
+
+.z-depth-1 {
+  -webkit-box-shadow: 0 2px 2px 0 rgba(24, 121, 185, 0.14), 0 1px 5px 0 rgba(24, 121, 185, 0.12), 0 3px 1px -2px rgba(24, 121, 185, 0.2);
+  box-shadow: 0 2px 2px 0 rgba(24, 121, 185, 0.14), 0 1px 5px 0 rgba(24, 121, 185, 0.12), 0 3px 1px -2px rgba(24, 121, 185, 0.2);
+}
+
+.z-depth-1-half {
+  -webkit-box-shadow: 0 3px 3px 0 rgba(24, 121, 185, 0.14), 0 1px 7px 0 rgba(24, 121, 185, 0.12), 0 3px 1px -1px rgba(24, 121, 185, 0.2);
+  box-shadow: 0 3px 3px 0 rgba(24, 121, 185, 0.14), 0 1px 7px 0 rgba(24, 121, 185, 0.12), 0 3px 1px -1px rgba(24, 121, 185, 0.2);
+}
+
+.z-depth-2 {
+  -webkit-box-shadow: 0 4px 5px 0 rgba(24, 121, 185, 0.14), 0 1px 10px 0 rgba(24, 121, 185, 0.12), 0 2px 4px -1px rgba(24, 121, 185, 0.3);
+  box-shadow: 0 4px 5px 0 rgba(24, 121, 185, 0.14), 0 1px 10px 0 rgba(24, 121, 185, 0.12), 0 2px 4px -1px rgba(24, 121, 185, 0.3);
+}
+
+.z-depth-3 {
+  -webkit-box-shadow: 0 6px 10px 0 rgba(24, 121, 185, 0.14), 0 1px 18px 0 rgba(24, 121, 185, 0.12), 0 3px 5px -1px rgba(24, 121, 185, 0.3);
+  box-shadow: 0 6px 10px 0 rgba(24, 121, 185, 0.14), 0 1px 18px 0 rgba(24, 121, 185, 0.12), 0 3px 5px -1px rgba(24, 121, 185, 0.3);
+}
+
+.z-depth-4 {
+  -webkit-box-shadow: 0 8px 10px 1px rgba(24, 121, 185, 0.14), 0 3px 14px 2px rgba(24, 121, 185, 0.12), 0 5px 5px -3px rgba(24, 121, 185, 0.3);
+  box-shadow: 0 8px 10px 1px rgba(24, 121, 185, 0.14), 0 3px 14px 2px rgba(24, 121, 185, 0.12), 0 5px 5px -3px rgba(24, 121, 185, 0.3);
+}
+
+.z-depth-5 {
+  -webkit-box-shadow: 0 16px 24px 2px rgba(24, 121, 185, 0.14), 0 6px 30px 5px rgba(24, 121, 185, 0.12), 0 8px 10px -5px rgba(24, 121, 185, 0.3);
+  box-shadow: 0 16px 24px 2px rgba(24, 121, 185, 0.14), 0 6px 30px 5px rgba(24, 121, 185, 0.12), 0 8px 10px -5px rgba(24, 121, 185, 0.3);
+}
+
+/* Buttons */
+.primary-btn {
+  font-size: 21px;
+  width: 160px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #3ad671;
+  border-radius: 5px;
+  color: #fff;
+  border: none;
+}
+
+.btn-long {
+  width: 400px;
+  height: 30px;
+  border-radius: 5px;
+  box-shadow: 0 2px 7px 0 rgba(0, 0, 0, 0.04);
+  font-size: 20px;
+  text-align: center;
+  padding: 14px 40px;
+  margin: 10px auto;
+  justify-content: center;
+  color: #ffffff;
+
+  h3 {
+    font-weight: 400;
+    font-family: 'Lato', sans-serif;
+    margin: 0 20px;
+  }
+
+  .popup-icon {
+    width: 24px;
+    height: 24px;
+  }
+}

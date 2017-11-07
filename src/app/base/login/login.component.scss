@@ -1,0 +1,27 @@
+#loginSection {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+.facebook-btn {
+  background-color: #4468b2;
+}
+
+.continue-btn {
+  background-color: #3ad671;
+}
+
+.signup-btn {
+  background-color: #e0e1e0;
+  color: #2980b9;
+}
+
+#loginForm {
+  justify-content: center;
+
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}

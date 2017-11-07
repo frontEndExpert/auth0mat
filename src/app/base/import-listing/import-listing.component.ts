@@ -12,4 +12,8 @@ export class ImportListingComponent implements OnInit {
   ngOnInit() {
   }
 
+  importListing() {
+
+  }
+
 }

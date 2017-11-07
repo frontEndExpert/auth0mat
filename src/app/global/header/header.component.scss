@@ -1,0 +1,35 @@
+#navbar {
+  background-color: #007EBC;
+  height: 100px;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 10;
+  border-bottom: 3px solid #1879b9;
+
+  * {
+    color: #fff;
+  }
+
+  h1, h4 {
+    margin: 2px 0;
+  }
+
+  h1 {
+    font-size: 30px;
+    font-weight: bold;
+  }
+
+  h4 {
+    font-size: 17px;
+    font-weight: 400;
+  }
+
+  .nav-link {
+    padding: 10px 30px;
+
+    &.signup {
+      background-color: #3ad671;
+      border-radius: 5px;
+    }
+  }
+}
