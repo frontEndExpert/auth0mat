@@ -1,3 +1,6 @@
+@import '../../node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css';
+@import "_media";
+
 /* General styles */
 
 body {
@@ -5,13 +8,27 @@ body {
   padding: 0;
 }
 
+a:not([href]):hover {
+  cursor: pointer;
+}
+
 .wrap {
   padding: 0 10vw;
+
+  &.wrap-tight {
+    padding: 0 20vw;
+  }
+
+  &.wrap-little {
+    padding: 0 6vw;
+  }
 }
 
 .horizontal-flex {
   display: flex;
   align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
 
   &.reverse {
     flex-direction: row-reverse;
@@ -41,9 +58,17 @@ a.no-underline {
   text-decoration: none;
 }
 
+.no-border {
+  border: none !important;
+}
+
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Montserrat', sans-serif;
   font-weight: 400;
+}
+
+.show-mobile {
+  display: none;
 }
 
 /* Inputs and other form elements */
@@ -71,6 +96,10 @@ fieldset {
       right:50%;
     }
   }
+}
+
+.continue-btn {
+  background-color: #3ad671;
 }
 
 input {
@@ -119,6 +148,39 @@ label.icon {
   align-items: center;
 }
 
+/* Dropzone */
+
+div.dropzone {
+
+  height: 50vh;
+
+  .dz-message {
+    height: 90%;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    background: none !important;
+    border-radius: 5px;
+  }
+}
+
+div.add-photo div.dropzone {
+  width: 64px;
+  height: 64px;
+
+  .dz-message {
+    max-width: 100px !important;
+    width: 64px !important;
+  }
+}
+
+.dz-message {
+  margin: 0 !important;
+  height: 100% !important;
+  box-sizing: border-box;
+}
+
+
 /* Z-Depths Based On Material Guidelines */
 
 .z-depth-1 {
@@ -151,6 +213,18 @@ label.icon {
   box-shadow: 0 16px 24px 2px rgba(24, 121, 185, 0.14), 0 6px 30px 5px rgba(24, 121, 185, 0.12), 0 8px 10px -5px rgba(24, 121, 185, 0.3);
 }
 
+/* Helper Classes */
+
+.justify-start {
+  justify-content: flex-start;
+}
+
+@media (min-width: 786px) {
+  .is-4 {
+    max-width: 33.333333%;
+  }
+}
+
 /* Buttons */
 .primary-btn {
   font-size: 21px;
@@ -176,6 +250,7 @@ label.icon {
   margin: 10px auto;
   justify-content: center;
   color: #ffffff;
+  max-width: 70%;
 
   h3 {
     font-weight: 400;
@@ -187,4 +262,9 @@ label.icon {
     width: 24px;
     height: 24px;
   }
+}
+
+/* Stepper */
+.mat-vertical-content {
+  padding: 0 !important;
 }

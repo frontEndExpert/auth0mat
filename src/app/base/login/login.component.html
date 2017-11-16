@@ -9,17 +9,17 @@
   <div id="loginForm" class="horizontal-flex">
     <form>
       <fieldset class="material-input">
-        <label for="email" class="icon">icon</label>
+        <label for="email" class="icon"><img src="assets/icons/mail.svg" alt="" class="svg-icon"></label>
         <input type="email" id="email" placeholder="Email" class="material-input has-icon">
         <span class="bar"></span>
       </fieldset>
       <fieldset class="material-input">
-        <label for="password" class="icon">icon</label>
+        <label for="password" class="icon"><img src="assets/icons/lock.svg" alt="" class="svg-icon"></label>
         <input type="password" id="password" placeholder="Password" class="material-input has-icon">
         <span class="bar"></span>
       </fieldset>
       <br>
-      <a href="#" class="text-centered no-underline">Forgot Password?</a>
+      <a routerLink="/forgot-password" class="text-centered no-underline">Forgot Password?</a>
     </form>
   </div>
   <br>
@@ -29,5 +29,5 @@
   <br>
   <h4 class="text-centered">New To Catchtown?</h4>
   <br>
-  <a href="#" class="btn-long signup-btn no-underline">Sign Up</a>
+  <a routerLink="/signup" class="btn-long signup-btn no-underline">Sign Up</a>
 </section>

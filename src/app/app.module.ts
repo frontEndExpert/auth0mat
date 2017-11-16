@@ -10,6 +10,13 @@ import {AngularMaterialModule} from "./angular-material/angular-material.module"
 import {RouterModule} from "@angular/router";
 import { LoginComponent } from './base/login/login.component';
 import { SignupComponent } from './base/signup/signup.component';
+import { ForgotPasswordComponent } from './base/login/forgot-password/forgot-password.component';
+import { PostListingComponent } from './listings/post-listing/post-listing.component';
+import { CoverPhotoComponent } from './listings/post-listing/cover-photo/cover-photo.component';
+import {DropzoneModule} from "ngx-dropzone-wrapper";
+import {ApplyFilterComponent} from "./listings/post-listing/apply-filter/apply-filter.component";
+import { SetDetailsComponent } from './listings/post-listing/set-details/set-details.component';
+import { ListPostComponent } from './listings/post-listing/list-post/list-post.component';
 
 @NgModule({
   declarations: [
@@ -18,16 +25,27 @@ import { SignupComponent } from './base/signup/signup.component';
     FooterComponent,
     ImportListingComponent,
     LoginComponent,
-    SignupComponent
+    SignupComponent,
+    ForgotPasswordComponent,
+    PostListingComponent,
+    CoverPhotoComponent,
+    ApplyFilterComponent,
+    SetDetailsComponent,
+    ListPostComponent
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     AngularMaterialModule,
+    DropzoneModule,
     RouterModule.forRoot([
+      { path: 'forgot-password', component: ForgotPasswordComponent },
       { path: 'login', component: LoginComponent },
       { path: 'signup', component: SignupComponent },
       { path: '', component: ImportListingComponent }
+    ]),
+    RouterModule.forChild([
+      { path: 'listings/post-listing', component: PostListingComponent},
     ])
   ],
   providers: [],

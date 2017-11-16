@@ -3,14 +3,14 @@
   <h3>Copy Your Craigslist Listing to Catchtown</h3>
   <br>
   <div class="horizontal-flex">
-    <fieldset>
-      <label for="copyListing" class="icon">icon</label>
+    <fieldset class="text-centered">
+      <label for="copyListing" class="icon"><img src="assets/icons/link.svg" alt="" class="svg-icon"></label>
       <input type="text" class="has-icon" id="copyListing" name="copy-listing" placeholder="Paste your Craigslist Link">
     </fieldset>
     <button class="primary-btn" (click)="importListing()">Continue</button>
   </div>
   <br>
-  <a href="#">Post Listing Manually</a>
+  <a routerLink="/listings/post-listing">Post Listing Manually</a>
 </section>
 
 <section class="additional-info wrap">

@@ -46,3 +46,13 @@
     }
   }
 }
+
+@media (max-width: 600px) {
+  * {
+    text-align: center;
+  }
+
+  .horizontal-flex * {
+    flex: 0 1 80% !important;
+  }
+}

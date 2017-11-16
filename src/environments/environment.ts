@@ -4,5 +4,11 @@
 // The list of which env maps to which file can be found in `.angular-cli.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  config: {
+    // Change this to your upload POST address:
+    url: 'https://httpbin.org/post',
+    maxFilesize: 50,
+    acceptedFiles: 'image/*'
+  }
 };

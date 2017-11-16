@@ -1,0 +1,60 @@
+<div class="photos">
+  <h2 class="subtitle">Photos</h2>
+  <div class="add-photos horizontal-flex">
+    <div class="add-photo" *ngFor="let image of images; let i = index">
+      <div class="vertical-flex">
+        <img alt="" *ngIf="image" [src]="image">
+        <dropzone [config]="dzConfig" [message]="'Add Photo'" *ngIf="!image"></dropzone>
+        <p class="cover-text" *ngIf="i === 0">Cover Photo</p>
+        <p class="cover-text" *ngIf="i !== 0"> </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="details">
+  <form ngForm>
+    <div class="fieldset horizontal-flex">
+      <label for="title"></label>
+      <input type="text" id="title" placeholder="What are you selling? (required)" required>
+    </div>
+    <div class="fieldset horizontal-flex">
+      <label for="title"></label>
+      <input type="text" id="description" placeholder="Describe it (required)" required>
+    </div>
+    <div class="fieldset labelled horizontal-flex">
+      <label for="category" style="border-right: 1px solid rgba(0,0,0,0.12);">Category</label>
+      <div class="select">
+        <select name="category" id="category">
+          <option value="select" selected disabled>Required</option>
+        </select>
+      </div>
+    </div>
+    <div class="fieldset labelled horizontal-flex">
+      <label for="price">Price</label>
+      <input type="number" id="price" required placeholder="Required">
+    </div>
+    <div class="fieldset labelled horizontal-flex">
+      <label for="location">Location</label>
+      <input type="text" id="location" required placeholder="Required">
+    </div>
+    <div class="fieldset labelled horizontal-flex" style="padding-top: 10px;">
+      <label>Make Offer</label>
+      <div class="wrapper">
+        <input type="checkbox" name="toggle" id="toggle">
+        <label for="toggle"></label>
+      </div>
+    </div>
+    <div class="fieldset no-border labelled horizontal-flex">
+      <label for="lowest">Lowest Price</label>
+      <input type="number" class="no-border" id="lowest" required placeholder="Required">
+    </div>
+    <div class="fieldset"></div>
+    <br>
+    <br>
+    <div class="horizontal-flex" style="justify-content: space-between; width: 400px">
+      <a href="#" class="no-underline">Back To Filters</a>
+      <a href="#" class="continue-btn primary-btn no-underline">Continue</a>
+    </div>
+  </form>
+</div>

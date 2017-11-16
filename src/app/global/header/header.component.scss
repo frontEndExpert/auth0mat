@@ -5,6 +5,7 @@
   justify-content: space-between;
   z-index: 10;
   border-bottom: 3px solid #1879b9;
+  position: relative;
 
   * {
     color: #fff;
@@ -23,13 +24,89 @@
     font-size: 17px;
     font-weight: 400;
   }
+}
 
-  .nav-link {
-    padding: 10px 30px;
+.nav-link {
+  padding: 10px 30px;
 
-    &.signup {
-      background-color: #3ad671;
-      border-radius: 5px;
+  &.signup {
+    background-color: #3ad671;
+    border-radius: 5px;
+  }
+}
+
+.sidenav-open {
+  position: absolute;
+  left: 20px;
+  display: flex;
+  align-items: center;
+}
+
+@media (max-width: 600px) {
+
+  #navbar {
+    h4 {
+      display: none;
+    }
+
+    h1 span.city-name {
+      display: none;
     }
   }
+}
+
+.sidenav-panel {
+  padding-top: 30px;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 20;
+  background: #007EBC;
+  width: 80vmin;
+  transform: translateX(-80vmin);
+  transition: all 0.3s ease-in-out;
+
+  &.active {
+    transform: translateX(0);
+  }
+
+  a {
+    color: #fff;
+  }
+
+  .horizontal-flex {
+    width: 100%;
+  }
+
+  .login {
+    justify-self: flex-start;
+  }
+
+  .signup {
+    justify-self: center;
+  }
+
+  .close-sidenav {
+    justify-self: flex-end;
+  }
+
+  .vertical-flex {
+    align-items: flex-start !important;
+  }
+
+  .sidenav-link {
+    margin: 20px;
+    text-align: left;
+  }
+}
+
+div.panel-cover {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: rgba(0,0,0,0.7);
+  z-index: 19;
 }

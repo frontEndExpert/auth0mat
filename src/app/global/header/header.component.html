@@ -1,10 +1,37 @@
 <div class="horizontal-flex wrap" id="navbar" *ngIf="showHeader()">
-  <div class="vertical-flex">
-    <h1>Catch - Chicago</h1>
-    <h4>Catch the Best Deals in Town</h4>
+  <div class="sidenav-open show-mobile">
+    <a class="no-underline" (click)="isSidenavActive = true"><i class="material-icons">menu</i></a>
   </div>
-  <div class="horizontal-flex reverse">
+  <div class="vertical-flex header-title">
+    <a routerLink="/" class="no-underline">
+      <h1>Catchtown <span class="city-name">– Chicago</span></h1>
+      <h4>Catch the Best Deals in Town</h4>
+    </a>
+  </div>
+  <div class="horizontal-flex reverse hide-mobile">
     <a routerLink="/signup" class="nav-link signup no-underline">SignUp</a>
     <a routerLink="/login" class="nav-link login no-underline">Login</a>
   </div>
 </div>
+
+<div class="sidenav-panel" [class.active]="isSidenavActive">
+  <div class="horizontal-flex">
+    <a routerLink="/login" class="nav-link login no-underline">Login</a>
+    <a routerLink="/signup" class="nav-link signup no-underline">SignUp</a>
+    <a routerLink="" class="no-underline close-sidenav nav-link" (click)="isSidenavActive = false"><i class="material-icons">menu</i></a>
+  </div>
+  <br>
+  <div class="vertical-flex">
+    <div class="sidenav-link">
+      <a routerLink="" class="no-underline">Import Listing</a>
+    </div>
+    <div class="sidenav-link">
+      <a routerLink="" class="no-underline">Messages</a>
+    </div>
+    <div class="sidenav-link">
+      <a routerLink="" class="no-underline">FAQ</a>
+    </div>
+  </div>
+</div>
+
+<div class="panel-cover" *ngIf="isSidenavActive"></div>

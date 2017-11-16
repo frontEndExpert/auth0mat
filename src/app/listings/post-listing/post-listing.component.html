@@ -1,0 +1,18 @@
+<div class="wrap">
+  <mat-vertical-stepper #stepper>
+    <mat-step label="Add Cover Photo">
+      <app-cover-photo [stepperInstance]="stepper" class="wrap wrap-tight"></app-cover-photo>
+    </mat-step>
+    <mat-step label="Apply Filter to Cover Photo">
+      <app-apply-filter></app-apply-filter>
+    </mat-step>
+    <mat-step label="Set Details">
+      <app-set-details></app-set-details>
+    </mat-step>
+    <mat-step label="Connect">
+      <app-list-post></app-list-post>
+    </mat-step>
+  </mat-vertical-stepper>
+  <br>
+  <br>
+</div>

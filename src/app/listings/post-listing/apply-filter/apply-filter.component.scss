@@ -1,0 +1,50 @@
+.filters-container {
+
+  align-items: center;
+
+  .filters {
+
+    flex-wrap: wrap;
+
+    .filter-item {
+      padding: 10px;
+
+      img {
+        width: 64px;
+        height: 64px;
+        border-radius: 5px;
+      }
+
+      p {
+        margin: 2px 0;
+      }
+    }
+  }
+
+  .vertical-flex {
+    align-items: center;
+  }
+}
+
+.btn-long {
+  width: 300px;
+}
+
+.highlighted img {
+  border: 3px solid #47d97a;
+}
+
+.img-container {
+  max-width: 100%;
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media (max-width: 600px) {
+  .btn-long {
+    width: 100% !important;
+  }
+}

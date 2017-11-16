@@ -8,6 +8,8 @@ import {Router} from "@angular/router";
 })
 export class HeaderComponent implements OnInit {
 
+  isSidenavActive = false;
+
   constructor(private router: Router) { }
 
   ngOnInit() {
