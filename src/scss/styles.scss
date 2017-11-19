@@ -3,9 +3,18 @@
 
 /* General styles */
 
-body {
+body, html {
   margin: 0;
   padding: 0;
+  position: relative;
+  min-height: 100vh;
+}
+
+app-footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
 }
 
 a:not([href]):hover {
@@ -26,6 +35,7 @@ a:not([href]):hover {
 
 .horizontal-flex {
   display: flex;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
@@ -65,10 +75,6 @@ a.no-underline {
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Montserrat', sans-serif;
   font-weight: 400;
-}
-
-.show-mobile {
-  display: none;
 }
 
 /* Inputs and other form elements */
@@ -136,7 +142,6 @@ input.has-icon {
 
 input::placeholder {
   color: #b0b0b0;
-  line-height: 50px;
 }
 
 label.icon {

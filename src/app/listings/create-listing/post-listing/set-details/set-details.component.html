@@ -1,6 +1,6 @@
 <div class="photos">
   <h2 class="subtitle">Photos</h2>
-  <div class="add-photos horizontal-flex">
+  <div class="add-photos horizontal-flex" style="flex-wrap: wrap!important;">
     <div class="add-photo" *ngFor="let image of images; let i = index">
       <div class="vertical-flex">
         <img alt="" *ngIf="image" [src]="image">
@@ -52,7 +52,7 @@
     <div class="fieldset"></div>
     <br>
     <br>
-    <div class="horizontal-flex" style="justify-content: space-between; width: 400px">
+    <div class="horizontal-flex set-details-action" style="justify-content: space-between; width: 400px; max-width: 100%;">
       <a href="#" class="no-underline">Back To Filters</a>
       <a href="#" class="continue-btn primary-btn no-underline">Continue</a>
     </div>

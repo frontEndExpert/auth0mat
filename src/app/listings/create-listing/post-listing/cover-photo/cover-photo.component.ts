@@ -1,7 +1,7 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {DropzoneConfigInterface} from "ngx-dropzone-wrapper";
 import {MatStepper} from "@angular/material";
-import {environment} from "../../../../environments/environment";
+import {environment} from "../../../../../environments/environment";
 
 @Component({
   selector: 'app-cover-photo',

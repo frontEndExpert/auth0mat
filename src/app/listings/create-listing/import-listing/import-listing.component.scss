@@ -12,10 +12,6 @@
     margin: 8px 0;
   }
 
-  #copyListing {
-    width: 40vw;
-  }
-
   label.icon {
     color: #000;
   }
@@ -48,11 +44,17 @@
 }
 
 @media (max-width: 600px) {
-  * {
+  *:not(input) {
     text-align: center;
   }
 
-  .horizontal-flex * {
-    flex: 0 1 80% !important;
+  .additional-info > .horizontal-flex .vertical-flex {
+    flex: 0 0 80%;
+  }
+}
+
+@media (min-width: 601px) {
+  .cta #copyListing {
+    width: 40vw;
   }
 }

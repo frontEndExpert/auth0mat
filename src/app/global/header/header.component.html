@@ -16,8 +16,8 @@
 
 <div class="sidenav-panel" [class.active]="isSidenavActive">
   <div class="horizontal-flex">
-    <a routerLink="/login" class="nav-link login no-underline">Login</a>
-    <a routerLink="/signup" class="nav-link signup no-underline">SignUp</a>
+    <a routerLink="/login" class="nav-link login no-underline" (click)="isSidenavActive = false">Login</a>
+    <a routerLink="/signup" class="nav-link signup no-underline" (click)="isSidenavActive = false">SignUp</a>
     <a routerLink="" class="no-underline close-sidenav nav-link" (click)="isSidenavActive = false"><i class="material-icons">menu</i></a>
   </div>
   <br>
