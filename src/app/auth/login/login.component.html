@@ -19,7 +19,7 @@
         <span class="bar"></span>
       </fieldset>
       <br>
-      <a routerLink="/forgot-password" class="text-centered no-underline">Forgot Password?</a>
+      <a [routerLink]="['/auth', 'forgot']" class="text-centered no-underline">Forgot Password?</a>
     </form>
   </div>
   <br>
@@ -29,5 +29,5 @@
   <br>
   <h4 class="text-centered">New To Catchtown?</h4>
   <br>
-  <a routerLink="/signup" class="btn-long signup-btn no-underline">Sign Up</a>
+  <a [routerLink]="['/auth', 'signup']" class="btn-long signup-btn no-underline">Sign Up</a>
 </section>
