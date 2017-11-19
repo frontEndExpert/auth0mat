@@ -1,0 +1,42 @@
+.title {
+  font-size: 25px;
+
+  .small {
+    font-size: 18px;
+    color: #c9c9c9;
+    margin-left: 24px;
+  }
+}
+
+.faq {
+  padding-bottom: 30px;
+}
+
+.qa-set {
+  margin: 28px 0;
+
+  .question {
+    font-weight: bold;
+
+    &:before {
+      content: 'Q:';
+      font-weight: bold;
+    }
+  }
+
+  .answer {
+    &:before {
+      content: 'A:';
+      font-weight: bold;
+    }
+  }
+
+  .question, .answer {
+    margin: 8px 0;
+
+    &:before {
+      margin-right: 12px;
+    }
+  }
+
+}

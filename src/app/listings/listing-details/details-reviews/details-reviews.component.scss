@@ -1,0 +1,50 @@
+img {
+  max-height: 24px;
+
+  &.avatar {
+    max-height: 70px;
+    margin-right: 24px;
+  }
+}
+
+h1.title {
+  margin: 2px 0;
+  font-size: 25px;
+}
+
+div.rating {
+  margin-bottom: 0;
+  margin-left: 14px;
+}
+
+ul {
+  padding-left: 0;
+  margin-top: 2px;
+
+  li > div.horizontal-flex {
+    border-bottom: 1px solid rgba(216, 216, 216, 0.4);
+    margin-bottom: 30px;
+  }
+}
+
+.stretch {
+  height: 100%;
+}
+
+.flaked {
+  color: #c9c9c9;
+  margin-top: 4px;
+}
+
+.user-review {
+
+  padding-bottom: 12px;
+
+  p {
+    margin: 8px 0;
+  }
+}
+
+.user-reviews {
+  padding-bottom: 30px;
+}
