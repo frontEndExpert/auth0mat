@@ -11,6 +11,7 @@ import {PostListingComponent} from "./post-listing/post-listing.component";
 import {DropzoneModule} from "ngx-dropzone-wrapper";
 import {AngularMaterialModule} from "../../angular-material/angular-material.module";
 import { CreateListingComponent } from './create-listing.component';
+import {TopListingsComponent} from "./import-listing/top-listings/top-listings.component";
 
 @NgModule({
   imports: [
@@ -26,7 +27,8 @@ import { CreateListingComponent } from './create-listing.component';
     SetDetailsComponent,
     ListPostComponent,
     PostListingComponent,
-    CreateListingComponent
+    CreateListingComponent,
+    TopListingsComponent
   ]
 })
 export class CreateListingModule { }

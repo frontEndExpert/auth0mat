@@ -1,0 +1,53 @@
+h4, h3, p {
+  margin: 2px 0;
+}
+
+.top-listings {
+  overflow-x: scroll;
+  white-space: nowrap;
+  border-bottom: 1px solid rgba(216, 216, 216, 0.4);
+
+  .listing-item {
+    display: inline-flex !important;
+    flex-wrap: nowrap !important;
+    width: 300px;
+    white-space: normal !important;
+    height: 130px;
+    padding: 5px 10px;
+
+    &:nth-of-type(1) {
+      background-color: #E3F5FF;
+    }
+
+    div {
+      white-space: normal !important;
+
+      &.img {
+        height: 60%;
+        display: flex;
+        align-items: center;
+
+        img {
+          height: 100%;
+          width: auto;
+        }
+      }
+
+      &.vertical-flex {
+        padding-left: 10px;
+      }
+    }
+  }
+}
+
+h4 {
+  font-size: 14px;
+}
+
+h3 {
+  font-size: 16px;
+}
+
+p {
+  font-size: 14px;
+}

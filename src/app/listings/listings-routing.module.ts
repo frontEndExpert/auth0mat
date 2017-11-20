@@ -5,7 +5,7 @@ import {ListingDetailsComponent} from "./listing-details/listing-details.compone
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'listings',
+    redirectTo: 'listings/import',
     pathMatch: 'full'
   },
   {

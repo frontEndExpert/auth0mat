@@ -13,13 +13,17 @@ body, html {
 
 app-footer {
   position: absolute;
-  bottom: 0;
+  bottom: -40px;
   left: 0;
   right: 0;
 }
 
 a:not([href]):hover {
   cursor: pointer;
+}
+
+.import-wrap {
+  padding: 0 22vw;
 }
 
 .wrap {

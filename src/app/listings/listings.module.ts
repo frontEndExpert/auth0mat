@@ -30,10 +30,9 @@ import { AgmCoreModule } from '@agm/core';
     DetailsFaqComponent,
     DetailsReviewsComponent,
     SimilarListingsComponent,
+    DetailsImageAndMapComponent,
 
-    TruncatePipe,
-
-    DetailsImageAndMapComponent
+    TruncatePipe
   ],
   entryComponents: []
 })
