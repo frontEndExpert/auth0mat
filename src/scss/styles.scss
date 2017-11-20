@@ -48,6 +48,10 @@ a:not([href]):hover {
   &.reverse {
     flex-direction: row-reverse;
   }
+
+  &.btn-long {
+    flex-wrap: nowrap;
+  }
 }
 
 .vertical-flex {
