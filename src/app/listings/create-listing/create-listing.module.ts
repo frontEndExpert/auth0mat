@@ -12,6 +12,8 @@ import {DropzoneModule} from "ngx-dropzone-wrapper";
 import {AngularMaterialModule} from "../../angular-material/angular-material.module";
 import { CreateListingComponent } from './create-listing.component';
 import {TopListingsComponent} from "./import-listing/top-listings/top-listings.component";
+import { ImportErrorComponent } from './import-listing/import-error/import-error.component';
+import { ImportProgressComponent } from './import-listing/import-progress/import-progress.component';
 
 @NgModule({
   imports: [
@@ -28,7 +30,9 @@ import {TopListingsComponent} from "./import-listing/top-listings/top-listings.c
     ListPostComponent,
     PostListingComponent,
     CreateListingComponent,
-    TopListingsComponent
+    TopListingsComponent,
+    ImportErrorComponent,
+    ImportProgressComponent
   ]
 })
 export class CreateListingModule { }

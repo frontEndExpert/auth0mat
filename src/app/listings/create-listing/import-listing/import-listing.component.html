@@ -1,16 +1,20 @@
 <section class="cta vertical-flex wrap">
-  <h1>Sell Smart Locally.</h1>
-  <h3>Copy Your Craigslist Listing to Catchtown</h3>
-  <br>
+  <div *ngIf="!importError" class="text-centered">
+    <h1>Sell Smart Locally.</h1>
+    <h3>Copy Your Craigslist Listing to Catchtown</h3>
+    <br>
+  </div>
+  <app-import-error *ngIf="importError"></app-import-error>
   <div class="horizontal-flex">
     <fieldset class="text-centered">
-      <label for="copyListing" class="icon"><img src="assets/icons/link.svg" alt="" class="svg-icon"></label>
-      <input type="text" class="has-icon" id="copyListing" name="copy-listing" placeholder="Paste your Craigslist Link">
+      <label for="copyListing" class="icon"><img [src]="importIcon()" alt="" class="svg-icon"></label>
+      <input type="text" class="has-icon" id="copyListing" name="copy-listing" placeholder="Paste your Craigslist Link" [class.is-error]="importError">
     </fieldset>
     <button class="primary-btn" (click)="importListing()">Continue</button>
   </div>
   <br>
   <a routerLink="/listings/post">Post Listing Manually</a>
+
 </section>
 <section class="top-listings">
   <app-top-listings></app-top-listings>
@@ -22,7 +26,7 @@
         <img src="assets/images/trust.png" alt="">
       </div>
       <div class="info-text">
-        <h2>Trust</h2>
+        <h2 class="is-roboto">Trust</h2>
         <p>Start building trust with potential buyers through our unique feedback system</p>
       </div>
     </div>
@@ -31,7 +35,7 @@
         <img src="assets/images/safe.png" alt="">
       </div>
       <div class="info-text">
-        <h2>Safe</h2>
+        <h2 class="is-roboto">Safe</h2>
         <p>Review verifications and feedback of potential buyers before in</p>
       </div>
     </div>
@@ -40,7 +44,7 @@
         <img src="assets/images/efficient.png" alt="">
       </div>
       <div class="info-text">
-        <h2>Efficient</h2>
+        <h2 class="is-roboto">Efficient</h2>
         <p>Avoid low-ballers using the auto-reject feature</p>
       </div>
     </div>

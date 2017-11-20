@@ -7,13 +7,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ImportListingComponent implements OnInit {
 
+  importError = false;
+
   constructor() { }
 
   ngOnInit() {
   }
 
   importListing() {
+    this.importError = !this.importError;
+  }
 
+  importIcon() {
+    if (this.importError) {
+      return 'assets/icons/link_red.svg';
+    }
+
+    return 'assets/icons/link.svg';
   }
 
 }
