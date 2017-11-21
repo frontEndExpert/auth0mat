@@ -47,6 +47,10 @@
   .btn-long {
     width: 100% !important;
   }
+
+  .filter-item {
+    flex-basis: 40%;
+  }
 }
 
 @media (max-width: 1200px) {

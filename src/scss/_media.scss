@@ -53,8 +53,9 @@
 
   /* Stepper */
 
-  .mat-vertical-content-container {
-    margin-right: 36px;
+  .mat-horizontal-stepper-content, .mat-horizontal-content-container, mat-horizontal-stepper {
+    width: 100vw !important;
+    padding: 0 !important;
   }
 }
 
