@@ -48,3 +48,14 @@
     width: 100% !important;
   }
 }
+
+@media (max-width: 1200px) {
+  .justify-custom {
+    justify-content: center !important;
+  }
+}
+
+.primary-btn {
+  color: #fff !important;
+  margin: 0 10px;
+}

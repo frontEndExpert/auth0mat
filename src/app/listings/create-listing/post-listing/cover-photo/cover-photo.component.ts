@@ -1,7 +1,7 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {DropzoneConfigInterface} from "ngx-dropzone-wrapper";
-import {MatStepper} from "@angular/material";
 import {environment} from "../../../../../environments/environment";
+import {MatStepper} from "@angular/material";
 
 @Component({
   selector: 'app-cover-photo',
@@ -9,17 +9,21 @@ import {environment} from "../../../../../environments/environment";
   styleUrls: ['./cover-photo.component.scss']
 })
 export class CoverPhotoComponent implements OnInit {
-  @Input('stepperInstance') stepper;
+  @Input('stepper') stepper: MatStepper;
+
+  @Output()
+  stepProgress = new EventEmitter<number>();
 
   dzConfig: DropzoneConfigInterface = environment.config;
+
+  nextStep() {
+    this.stepper.next();
+    this.stepProgress.emit(50);
+  }
 
   constructor() { }
 
   ngOnInit() {
-  }
-
-  nextStep(stepper: MatStepper) {
-    stepper.next();
   }
 
 }

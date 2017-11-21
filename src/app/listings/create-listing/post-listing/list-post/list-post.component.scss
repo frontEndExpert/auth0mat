@@ -1,65 +1,15 @@
 .container {
-
   width: 500px;
   max-width: 100%;
-
-  h2 {
-
-    a {
-      font-weight: bold;
-    }
-
-    &, & a {
-      font-size: 20px;
-      color: #666;
-    }
-  }
-
-
-  .items {
-    justify-content: space-between;
-    margin: 0 auto;
-    flex-wrap: wrap;
-
-    .item {
-      text-align: center;
-
-      img {
-        width: 64px;
-        height: 64px;
-      }
-    }
-  }
-
-  .connect-options {
-    .option {
-      justify-content: space-between;
-      border-bottom: 1px solid #ccc;
-
-      .connect {
-        color: #ccc;
-
-        span {
-          color: #000;
-          font-size: 24px;
-          margin-left: 20px;
-        }
-      }
-    }
-  }
-
-  .btn-long-extra {
-    width: 100%;
-  }
-
+  text-align: center;
+  margin: 0 auto;
 }
 
-@media (max-width: 600px) {
-  .item {
-    flex: 1 1 100%;
-  }
+.primary-btn {
+  color: #fff !important;
+  margin: 0 10px;
+}
 
-  .option {
-    justify-content: space-between !important;
-  }
+.btn-long-extra {
+  width: 100%;
 }

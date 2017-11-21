@@ -1,6 +1,9 @@
 div.photos {
 
   margin: 0 24px 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
   div.add-photos {
 
@@ -29,6 +32,13 @@ div.photos {
 }
 
 div.details {
+
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
   input {
     flex: 1 1;
     border-radius: 0;
@@ -53,10 +63,6 @@ div.details {
       input {
         height: 40px;
       }
-    }
-
-    input {
-      border-left: 1px solid rgba(0,0,0,0.12);
     }
 
     input, .select {
@@ -165,4 +171,9 @@ input#toggle:checked + label:after {
   .set-details-action {
     flex-direction: column-reverse;
   }
+}
+
+.primary-btn {
+  color: #fff !important;
+  margin: 0 10px;
 }

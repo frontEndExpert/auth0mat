@@ -1,3 +1,6 @@
+<h2 class="text-centered">Set Details</h2>
+<br>
+
 <div class="photos">
   <h2 class="subtitle">Photos</h2>
   <div class="add-photos horizontal-flex" style="flex-wrap: wrap!important;">
@@ -53,8 +56,8 @@
     <br>
     <br>
     <div class="horizontal-flex set-details-action" style="justify-content: space-between; width: 400px; max-width: 100%;">
-      <a href="#" class="no-underline">Back To Filters</a>
-      <a href="#" class="continue-btn primary-btn no-underline">Continue</a>
+      <a class="no-underline" (click)="previousStep()">Back To Filters</a>
+      <a (click)="nextStep()" class="continue-btn primary-btn no-underline">Continue</a>
     </div>
   </form>
 </div>

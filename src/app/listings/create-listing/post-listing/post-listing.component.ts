@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {MatStepper} from "@angular/material";
 
 @Component({
   selector: 'app-post-listing',
@@ -7,9 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PostListingComponent implements OnInit {
 
+  progressValue = 25;
+
   constructor() { }
 
   ngOnInit() {
+  }
+
+  nextStep(progress: number) {
+    this.progressValue = progress;
   }
 
 }

@@ -1,4 +1,12 @@
 <div class="vertical-flex">
-  <dropzone [config]="dzConfig" [message]="'Add Photo'" (success)="nextStep(stepper)"></dropzone>
+  <h2 class="text-centered">Add Cover Photo</h2>
+  <br>
+  <dropzone [config]="dzConfig" [message]="'Add Photo'" (success)="nextStep()"></dropzone>
   <a href="#" class="no-underline text-centered">or Browse Folders</a>
+
+  <div class="horizontal-flex step-button-container is-3">
+    <div class="column">
+      <button class="btn primary-btn" (click)="nextStep()">Continue</button>
+    </div>
+  </div>
 </div>

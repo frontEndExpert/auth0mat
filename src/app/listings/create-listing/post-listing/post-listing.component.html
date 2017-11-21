@@ -1,18 +1,23 @@
 <div class="wrap">
-  <mat-vertical-stepper #stepper>
+  <br>
+  <br>
+  <mat-progress-bar mode="determinate" [value]="progressValue"></mat-progress-bar>
+  <br>
+  <br>
+  <mat-horizontal-stepper #stepper>
     <mat-step label="Add Cover Photo">
-      <app-cover-photo [stepperInstance]="stepper" class="wrap wrap-tight"></app-cover-photo>
+      <app-cover-photo (stepProgress)="nextStep($event)" [stepper]="stepper"></app-cover-photo>
     </mat-step>
     <mat-step label="Apply Filter to Cover Photo">
-      <app-apply-filter></app-apply-filter>
+      <app-apply-filter (stepProgress)="nextStep($event)" [stepper]="stepper"></app-apply-filter>
     </mat-step>
     <mat-step label="Set Details">
-      <app-set-details></app-set-details>
+      <app-set-details (stepProgress)="nextStep($event)" [stepper]="stepper"></app-set-details>
     </mat-step>
     <mat-step label="Connect">
-      <app-list-post></app-list-post>
+      <app-list-post (stepProgress)="nextStep($event)" [stepper]="stepper"></app-list-post>
     </mat-step>
-  </mat-vertical-stepper>
+  </mat-horizontal-stepper>
   <br>
   <br>
 </div>
