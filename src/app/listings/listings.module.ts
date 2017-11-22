@@ -21,7 +21,7 @@ import { AgmCoreModule } from '@agm/core';
     CreateListingModule,
     StarRatingModule.forRoot(),
     AgmCoreModule.forRoot({
-      apiKey: ' AIzaSyCpd-3fZAndtemPV3iJ72n7gLDNr0nbkOU'
+      apiKey: 'AIzaSyCpd-3fZAndtemPV3iJ72n7gLDNr0nbkOU'
     })
   ],
   declarations: [
