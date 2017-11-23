@@ -82,7 +82,7 @@ p, a, input, input::placeholder, h1, h2, h3, h4, h5, h6, li {
   font-weight: 300;
 
   &.is-bold {
-    font-weight: bold !important;
+    font-weight: 500 !important;
   }
 
   &.is-primary {
