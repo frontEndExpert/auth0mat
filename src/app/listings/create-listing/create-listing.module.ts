@@ -14,6 +14,8 @@ import { CreateListingComponent } from './create-listing.component';
 import {TopListingsComponent} from "./import-listing/top-listings/top-listings.component";
 import { ImportErrorComponent } from './import-listing/import-error/import-error.component';
 import { ImportProgressComponent } from './import-listing/import-progress/import-progress.component';
+import { PostListedComponent } from './post-listing/post-listed/post-listed.component';
+import { ConnectPostComponent } from './post-listing/connect-post/connect-post.component';
 
 @NgModule({
   imports: [
@@ -32,7 +34,9 @@ import { ImportProgressComponent } from './import-listing/import-progress/import
     CreateListingComponent,
     TopListingsComponent,
     ImportErrorComponent,
-    ImportProgressComponent
+    ImportProgressComponent,
+    PostListedComponent,
+    ConnectPostComponent
   ]
 })
 export class CreateListingModule { }

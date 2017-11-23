@@ -43,6 +43,10 @@
   }
 }
 
+.justify-custom {
+  justify-content: space-evenly;
+}
+
 @media (max-width: 600px) {
   .btn-long {
     width: 100% !important;

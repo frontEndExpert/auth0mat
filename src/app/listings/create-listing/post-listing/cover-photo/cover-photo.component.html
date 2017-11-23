@@ -1,7 +1,9 @@
 <div class="vertical-flex">
   <h2 class="text-centered">Add Cover Photo</h2>
+  <hr class="lighter">
   <br>
   <dropzone [config]="dzConfig" [message]="'Add Photo'" (success)="nextStep()"></dropzone>
+  <br>
   <a href="#" class="no-underline text-centered">or Browse Folders</a>
 
   <div class="horizontal-flex step-button-container is-3">
