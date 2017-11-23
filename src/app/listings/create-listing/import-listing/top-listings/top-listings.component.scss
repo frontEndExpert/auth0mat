@@ -1,6 +1,10 @@
 p {
   margin: 2px 0;
   font-size: 15px !important;
+
+  &.is-bold {
+    font-weight: 500!important;
+  }
 }
 
 .top-listings {
@@ -13,7 +17,7 @@ p {
     flex-wrap: nowrap !important;
     width: 300px;
     white-space: normal !important;
-    height: 130px;
+    height: 100px;
     padding: 5px 10px;
 
     &:nth-of-type(1) {

@@ -79,10 +79,10 @@ a:not([href]):hover {
 p, a, input, input::placeholder, h1, h2, h3, h4, h5, h6, li {
   font-size: 17px;
   font-family: 'Lato', sans-serif !important;
-  font-weight: 400;
+  font-weight: 300;
 
   &.is-bold {
-    font-weight: bold;
+    font-weight: bold !important;
   }
 
   &.is-primary {
@@ -176,6 +176,10 @@ h5 {
 
 .is-muted {
   color: #BBBBBB;
+}
+
+.is-muted-dark {
+  color: #5A5A5A;
 }
 
 a {
@@ -443,6 +447,7 @@ div.add-photo div.dropzone {
 /* Buttons */
 .primary-btn {
   font-size: 21px;
+  font-weight: 300;
   width: 160px;
   height: 50px;
   display: flex;
@@ -464,6 +469,7 @@ div.add-photo div.dropzone {
   border-radius: 5px;
   box-shadow: 0 2px 7px 0 rgba(0, 0, 0, 0.04);
   font-size: 20px;
+  font-weight: 300;
   text-align: center;
   padding: 14px 40px;
   margin: 10px auto;
