@@ -4,6 +4,7 @@ import {ImportListingComponent} from "./import-listing/import-listing.component"
 import {PostListingComponent} from "./post-listing/post-listing.component";
 import {CreateListingComponent} from "./create-listing.component";
 import {ConnectPostComponent} from "./post-listing/connect-post/connect-post.component";
+import {PostListedComponent} from "./post-listing/post-listed/post-listed.component";
 
 const routes: Routes = [
   {
@@ -18,6 +19,10 @@ const routes: Routes = [
       {
         path: 'import',
         component: ImportListingComponent
+      },
+      {
+        path: 'post/listed',
+        component: PostListedComponent
       },
       {
         path: 'post/connect',
