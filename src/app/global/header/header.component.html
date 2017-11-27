@@ -1,18 +1,20 @@
-<div class="horizontal-flex wrap" id="navbar" *ngIf="showHeader()">
-  <div class="sidenav-open show-mobile">
-    <a class="no-underline" (click)="isSidenavActive = true"><i class="material-icons">menu</i></a>
-  </div>
-  <div class="vertical-flex header-title">
-    <a routerLink="/" class="no-underline vertical-flex">
-      <div class="horizontal-flex justify-between">
-        <h1 class="is-montserrat is-bold">Catchtown <span class="hide-mobile">- Chicago</span></h1>
-      </div>
-      <h4 class="is-montserrat is-medium">Catch the Best Deals in Town</h4>
-    </a>
-  </div>
-  <div class="horizontal-flex reverse hide-mobile">
-    <a [routerLink]="['/auth', 'signup']" class="nav-link signup no-underline">SignUp</a>
-    <a [routerLink]="['/auth', 'login']" class="nav-link login no-underline">Login</a>
+<div class="horizontal-flex" id="navbar" *ngIf="showHeader()">
+  <div class="wrap horizontal-flex justify-between">
+    <div class="sidenav-open show-mobile">
+      <a class="no-underline" (click)="isSidenavActive = true"><i class="material-icons">menu</i></a>
+    </div>
+    <div class="vertical-flex header-title">
+      <a routerLink="/" class="no-underline vertical-flex">
+        <div class="horizontal-flex justify-between">
+          <h1 class="is-montserrat is-bold">Catchtown <span class="hide-mobile">- Chicago</span></h1>
+        </div>
+        <h4 class="is-montserrat is-medium">Catch the Best Deals in Town</h4>
+      </a>
+    </div>
+    <div class="horizontal-flex reverse hide-mobile">
+      <a [routerLink]="['/auth', 'signup']" class="nav-link signup no-underline">SignUp</a>
+      <a [routerLink]="['/auth', 'login']" class="nav-link login no-underline">Login</a>
+    </div>
   </div>
 </div>
 

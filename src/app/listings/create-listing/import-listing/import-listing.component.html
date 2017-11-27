@@ -1,22 +1,26 @@
-<section class="cta vertical-flex wrap">
-  <div *ngIf="!importError" class="text-centered">
-    <h1 class="is-roboto is-semibold">Sell Smart Locally.</h1>
-    <h1 class="is-medium">Copy Your Craigslist Listing to Catchtown</h1>
+<section class="cta">
+  <div class="wrap vertical-flex">
+    <div *ngIf="!importError" class="text-centered">
+      <h1 class="is-roboto is-semibold">Sell Smart Locally.</h1>
+      <h1 class="is-medium">Copy Your Craigslist Listing to Catchtown</h1>
+      <br>
+      <br>
+    </div>
+    <app-import-error *ngIf="importError && !inProgress"></app-import-error>
+    <div class="horizontal-flex" *ngIf="!inProgress">
+      <form [formGroup]="form">
+        <fieldset class="text-centered">
+          <label for="copyListing" class="icon"><img [src]="importIcon()" alt="" class="svg-icon"></label>
+          <input type="text" class="has-icon" id="copyListing" name="craigslistLink" formControlName="craigslistLink" placeholder="Paste your Craigslist Link" [class.is-error]="importError">
+        </fieldset>
+      </form>
+      <button type="button" class="primary-btn is-regular" (click)="importListing()">Continue</button>
+    </div>
+    <app-import-progress *ngIf="inProgress && !importError" [value]="progressValue"></app-import-progress>
     <br>
     <br>
+    <a routerLink="/listings/post" class="no-underline is-medium">Post listing manually</a>
   </div>
-  <app-import-error *ngIf="importError && !inProgress"></app-import-error>
-  <div class="horizontal-flex" *ngIf="!inProgress">
-    <fieldset class="text-centered">
-      <label for="copyListing" class="icon"><img [src]="importIcon()" alt="" class="svg-icon"></label>
-      <input type="text" class="has-icon" id="copyListing" name="copy-listing" placeholder="Paste your Craigslist Link" [class.is-error]="importError">
-    </fieldset>
-    <button class="primary-btn is-regular" (click)="importListing()">Continue</button>
-  </div>
-  <app-import-progress *ngIf="inProgress && !importError" [value]="progressValue"></app-import-progress>
-  <br>
-  <a routerLink="/listings/post" class="no-underline is-medium">Post listing manually</a>
-
 </section>
 <section class="top-listings">
   <app-top-listings></app-top-listings>

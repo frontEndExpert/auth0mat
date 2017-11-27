@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {FormBuilder, Validators} from "@angular/forms";
+import {ImportListingValidators} from "./import-listing.validators";
 
 @Component({
   selector: 'app-import-listing',
@@ -7,11 +9,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ImportListingComponent implements OnInit {
 
+  form;
+
   importError = false;
   inProgress = false;
   progressValue = 0;
 
-  constructor() { }
+  constructor(fb: FormBuilder) {
+    this.form = fb.group({
+      craigslistLink: [
+        '',
+        Validators.required,
+        ImportListingValidators.validLink
+      ]
+    });
+  }
 
   ngOnInit() {
   }

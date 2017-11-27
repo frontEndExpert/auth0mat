@@ -1,7 +1,8 @@
-import {Component, EventEmitter, Input, OnInit, Output, ViewEncapsulation} from '@angular/core';
+import {Component, EventEmitter, Input, OnInit, Output, ViewChild, ViewEncapsulation} from '@angular/core';
 import {DropzoneConfigInterface} from "ngx-dropzone-wrapper";
 import {environment} from "../../../../../environments/environment";
 import {MatStepper} from "@angular/material";
+import {NgForm} from "@angular/forms";
 
 @Component({
   selector: 'app-set-details',
@@ -11,6 +12,7 @@ import {MatStepper} from "@angular/material";
 export class SetDetailsComponent implements OnInit {
 
   @Input('stepper') stepper: MatStepper;
+  @ViewChild('detailsForm') form: NgForm;
 
   @Output()
   stepProgress = new EventEmitter<number>();
@@ -31,6 +33,7 @@ export class SetDetailsComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    console.log(this.form);
   }
 
 }

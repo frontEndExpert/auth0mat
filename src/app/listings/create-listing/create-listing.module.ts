@@ -16,13 +16,16 @@ import { ImportErrorComponent } from './import-listing/import-error/import-error
 import { ImportProgressComponent } from './import-listing/import-progress/import-progress.component';
 import { PostListedComponent } from './post-listing/post-listed/post-listed.component';
 import { ConnectPostComponent } from './post-listing/connect-post/connect-post.component';
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 
 @NgModule({
   imports: [
     CommonModule,
     DropzoneModule,
     AngularMaterialModule,
-    CreateListingRoutingModule
+    CreateListingRoutingModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   declarations: [
     ImportListingComponent,
