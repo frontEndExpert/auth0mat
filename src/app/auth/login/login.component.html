@@ -1,10 +1,10 @@
 <section id="loginSection" class="vertical-flex wrap">
-  <a href="#" class="btn-long no-underline facebook-btn horizontal-flex">
+  <a href="#" class="btn-long no-underline facebook-btn horizontal-flex justify-evenly">
     <img src="assets/icons/facebook.svg" alt="" class="popup-icon">
-    <h3>Continue With Facebook</h3>
+    <h2 class="is-regular has-medium-letter-spacing">Continue With Facebook</h2>
   </a>
   <br>
-  <p class="or text-centered">Or login with email</p>
+  <h3 class="or text-centered is-regular is-roboto">Or login with email</h3>
   <br>
   <div id="loginForm" class="horizontal-flex">
     <form>
@@ -19,15 +19,17 @@
         <span class="bar"></span>
       </fieldset>
       <br>
-      <a [routerLink]="['/auth', 'forgot']" class="text-centered no-underline">Forgot Password?</a>
+      <a [routerLink]="['/auth', 'forgot']" class="text-centered no-underline"><h3 class="is-regular">Forgot Password?</h3></a>
     </form>
   </div>
   <br>
   <a href="#" class="btn-long no-underline continue-btn horizontal-flex">
-    <h3>Continue</h3>
+    <h2 class="is-regular has-medium-letter-spacing">Continue</h2>
   </a>
   <br>
-  <h4 class="text-centered">New To Catchtown?</h4>
+  <h3 class="text-centered is-regular">New To Catchtown?</h3>
   <br>
-  <a [routerLink]="['/auth', 'signup']" class="btn-long signup-btn no-underline">Sign Up</a>
+  <a [routerLink]="['/auth', 'signup']" class="btn-long signup-btn no-underline horizontal-flex">
+    <h2 class="is-regular has-medium-letter-spacing">SignUp</h2>
+  </a>
 </section>

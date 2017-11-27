@@ -66,7 +66,7 @@ a:not([href]):hover, button:hover {
 }
 
 .justify-evenly {
-  justify-content: space-evenly;
+  justify-content: space-evenly !important;
 }
 
 .align-start {
@@ -109,6 +109,10 @@ p, a, input, input::placeholder, h1, h2, h3, h4, h5, h6, li, button {
 
 .is-bold {
   font-weight: 700 !important;
+}
+
+.is-black {
+  font-weight: 900 !important;
 }
 
 p {
@@ -295,6 +299,10 @@ input {
       }
     }
 
+    &::placeholder {
+      letter-spacing: 0.02em;
+    }
+
   }
 
   &:focus {
@@ -431,7 +439,23 @@ div.add-photo div.dropzone {
   justify-content: flex-start;
 }
 
+.has-medium-letter-spacing {
+  letter-spacing: 0.02em;
+}
+
+.has-small-letter-spacing {
+  letter-spacing: 0.012em;
+}
+
 @media (min-width: 786px) {
+  .is-1 {
+    width: 8.333333%;
+  }
+
+  .is-2 {
+    width: 16.666666%;
+  }
+
   .is-3 {
     width: 22%;
   }
@@ -454,6 +478,10 @@ div.add-photo div.dropzone {
 
   .is-8 {
     width: 66.666666%;
+  }
+
+  .is-9 {
+    width: 75%;
   }
 
   .is-10 {

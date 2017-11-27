@@ -69,13 +69,17 @@ div.details {
       padding: 10px 20px;
     }
 
+    .select {
+      flex: 1 0 calc(60% - 40px);
+    }
+
   }
 }
 
 /* iOS Switch Styles */
 
 .wrapper {
-  flex: 1 1;
+  flex: 1 0 60%;
 }
 
 input#toggle {

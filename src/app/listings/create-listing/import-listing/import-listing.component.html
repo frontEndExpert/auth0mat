@@ -18,8 +18,24 @@
     </div>
     <app-import-progress *ngIf="inProgress && !importError" [value]="progressValue"></app-import-progress>
     <br>
-    <br>
     <a routerLink="/listings/post" class="no-underline is-medium">Post listing manually</a>
+    <br>
+    <br>
+    <div class="tips" [class.is-visible]="importError && !inProgress">
+      <div class="horizontal-flex justify-evenly">
+        <div class="vertical-flex is-1" style="align-items: center">
+          <img src="assets/icons/bulb.svg" alt="">
+          <h4 class="is-roboto is-medium">Tip</h4>
+        </div>
+        <div class="vertical-flex is-10">
+          <h1 class="is-roboto is-medium">Craigslist link can be found:</h1>
+          <ul class="tips-list">
+            <li>On the confirmation email sent to you when you first posted your ad, or</li>
+            <li>Going to your ad on Craigslist and copy the link from address bar.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 <section class="top-listings">

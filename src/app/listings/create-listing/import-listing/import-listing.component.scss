@@ -3,7 +3,7 @@
 
   .wrap {
     align-items: center;
-    padding: 5vmin 0 10vmin 0;
+    padding: 5vmin 0;
   }
 
   h1, h2, p, a {
@@ -17,6 +17,50 @@
 
   label.icon {
     color: #000;
+  }
+}
+
+.tips {
+
+  visibility: hidden;
+  width: 60%;
+
+  &.is-visible {
+    visibility: visible;
+  }
+
+  h1 {
+    font-size: 20px;
+    margin: 0 0 10px;
+  }
+
+  h4 {
+    font-size: 16px;
+    color: #1c6899;
+    margin: 2px 0;
+  }
+
+  img {
+    height: 70px;
+    width: auto;
+  }
+
+  .tips-list {
+    color: #fff;
+    list-style-type: none;
+    margin: 0;
+    padding-left: 20px;
+
+    & li {
+
+      margin: 10px 0;
+
+      &:before {
+        content: "–"; /* en dash */
+        position: absolute;
+        margin-left: -1.1em;
+      }
+    }
   }
 }
 
@@ -67,7 +111,7 @@ a {
     justify-content: center;
     align-items: center;
     flex: 0 0 100px;
-    margin: 0 20px 0 0;
+    margin: 0 30px 0 0;
 
     img {
       max-height: 60%;
