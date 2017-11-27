@@ -3,6 +3,7 @@ img {
 
   &.avatar {
     max-height: 70px;
+    max-width: 100%;
     margin-right: 24px;
   }
 }
@@ -21,7 +22,7 @@ ul {
   padding-left: 0;
   margin-top: 2px;
 
-  li > div.horizontal-flex {
+  li:not(:last-of-type) > div.horizontal-flex {
     border-bottom: 1px solid rgba(216, 216, 216, 0.4);
     margin-bottom: 30px;
   }
@@ -34,11 +35,12 @@ ul {
 .flaked {
   color: #c9c9c9;
   margin-top: 4px;
+  font-size: 20px;
   font-family: 'Lato', sans-serif;
 }
 
 .user-name {
-  font-weight: 500;
+  font-size: 19px;
 }
 
 .user-review {

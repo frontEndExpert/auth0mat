@@ -8,6 +8,7 @@ import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import {RouterModule} from "@angular/router";
 import {ListingsModule} from "./listings/listings.module";
 import {AuthModule} from "./auth/auth.module";
+import {MessengerModule} from "./messenger/messenger.module";
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import {AuthModule} from "./auth/auth.module";
     }]),
     // Custom App Modules
     AuthModule,
-    ListingsModule
+    ListingsModule,
+    MessengerModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -16,18 +16,19 @@
   margin: 28px 0;
 
   .question {
-    font-weight: bold;
 
     &:before {
       content: 'Q:';
-      font-weight: bold;
+      font-weight: 500;
+      font-family: 'Roboto', sans-serif;
     }
   }
 
   .answer {
     &:before {
       content: 'A:';
-      font-weight: bold;
+      font-weight: 500;
+      font-family: 'Roboto', sans-serif;
     }
   }
 
