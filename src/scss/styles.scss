@@ -374,12 +374,36 @@ div.dropzone {
 }
 
 div.add-photo div.dropzone {
-  width: 64px;
-  height: 64px;
+  width: 108px;
+  height: 108px;
 
   .dz-message {
-    max-width: 100px !important;
-    width: 64px !important;
+    max-width: 100%;
+    width: 100%;
+    .dz-text {
+      position: relative;
+      top: 30px;
+      color: #dbdbdb;
+      font-family: 'Roboto', sans-serif;
+      font-weight: bold;
+      font-size: 14px;
+      text-transform: uppercase;
+      letter-spacing: 0.02em;
+      padding: 0 !important;
+
+      &::before {
+        position: absolute;
+        content: '';
+        top: -50px;
+        background: url('/assets/icons/camera.svg') no-repeat;
+        background-size: contain;
+        width: 40px;
+        height: 40px;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+      }
+    }
   }
 }
 
@@ -387,6 +411,32 @@ div.add-photo div.dropzone {
   margin: 0 !important;
   height: 100% !important;
   box-sizing: border-box;
+}
+
+.cover-dropzone {
+  .dz-text {
+
+    position: relative;
+    top: 30px;
+    color: #dbdbdb;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+
+    &::before {
+      position: absolute;
+      content: '';
+      top: -60px;
+      background: url('/assets/icons/upload-cloud.svg') no-repeat;
+      background-size: contain;
+      width: 60px;
+      height: 60px;
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+    }
+  }
 }
 
 

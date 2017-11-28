@@ -7,25 +7,24 @@
       <div class="vertical-flex">
         <img alt="" *ngIf="image" [src]="image">
         <dropzone [config]="dzConfig" [message]="'Add Photo'" *ngIf="!image"></dropzone>
-        <p class="cover-text" *ngIf="i === 0">Cover Photo</p>
-        <p class="cover-text" *ngIf="i !== 0"> </p>
       </div>
     </div>
   </div>
 </div>
-
+<div class="spacer"></div>
+<div class="spacer"></div>
 <div class="details">
   <form #detailsForm="ngForm">
     <div class="fieldset horizontal-flex">
       <label for="title"></label>
-      <input type="text" id="title" name="title" placeholder="What are you selling? (required)" required ngModel>
+      <textarea type="text" id="title" name="title" placeholder="What are you selling? (required)" required ngModel></textarea>
     </div>
     <div class="fieldset horizontal-flex">
       <label for="title"></label>
-      <input type="text" id="description" name="description" placeholder="Describe it (required)" required ngModel>
+      <textarea type="text" id="description" name="description" placeholder="Describe it (optional)" ngModel></textarea>
     </div>
     <div class="fieldset labelled horizontal-flex">
-      <label for="category" style="border-right: 1px solid rgba(0,0,0,0.12);">Category</label>
+      <label for="category" style="border-right: 1px solid rgba(0,0,0,0.12);" class="is-roboto is-bold">Category</label>
       <div class="select">
         <select name="category" id="category" ngModel>
           <option value="select" selected disabled>Required</option>
@@ -33,29 +32,29 @@
       </div>
     </div>
     <div class="fieldset labelled horizontal-flex">
-      <label for="price">Price</label>
+      <label for="price" class="is-roboto is-bold">Price</label>
       <input type="number" id="price" name="price" required placeholder="Required" ngModel>
     </div>
     <div class="fieldset labelled horizontal-flex">
-      <label for="location">Location</label>
+      <label for="location" class="is-roboto is-bold">Location</label>
       <input type="text" id="location" name="location" required placeholder="Required" ngModel>
     </div>
     <div class="fieldset labelled horizontal-flex" style="padding-top: 10px;">
-      <label>Make Offer</label>
+      <label class="is-roboto is-bold">Make Offer</label>
       <div class="wrapper">
         <input type="checkbox" name="offer" id="toggle" ngModel>
         <label for="toggle"></label>
       </div>
     </div>
-    <div class="fieldset no-border labelled horizontal-flex">
-      <label for="lowest">Lowest Price</label>
+    <div class="fieldset bottom-border labelled horizontal-flex">
+      <label for="lowest" class="is-roboto is-bold">Lowest Price</label>
       <input type="number" class="no-border" name="lowestPrice" id="lowest" required placeholder="Required" ngModel>
     </div>
     <div class="spacer"></div>
     <div class="spacer"></div>
-    <div class="horizontal-flex set-details-action" style="justify-content: space-between; width: 400px; max-width: 100%;">
+    <div class="horizontal-flex set-details-action" style="justify-content: space-between; width: 50%;">
       <a class="no-underline" (click)="previousStep()">Back To Filters</a>
-      <a (click)="nextStep()" class="continue-btn primary-btn no-underline">Continue</a>
+      <a (click)="nextStep()" class="continue-btn is-thin primary-btn no-underline">Continue</a>
     </div>
   </form>
 </div>

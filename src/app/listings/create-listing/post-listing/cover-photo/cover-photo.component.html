@@ -2,7 +2,7 @@
   <h1 class="text-centered is-roboto is-medium has-medium-letter-spacing">Add Cover Photo</h1>
   <hr class="lighter">
   <div class="spacer"></div>
-  <dropzone [config]="dzConfig" [message]="'Add Photo'" (success)="nextStep()"></dropzone>
+  <dropzone [config]="dzConfig" [message]="'Add Photo'" (success)="nextStep()" [useDropzoneClass]="true" class="cover-dropzone"></dropzone>
   <div class="spacer"></div>
   <a href="#" class="no-underline text-centered">or Browse Folders</a>
 

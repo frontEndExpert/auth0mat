@@ -40,3 +40,15 @@ h3 {
   width: 32px;
   height: 32px;
 }
+
+@media (max-width: 600px) {
+  #loginForm {
+    form {
+      width: 100%;
+    }
+  }
+
+  .facebook-btn h2 {
+    font-size: 20px;
+  }
+}

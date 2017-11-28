@@ -17,7 +17,7 @@ export class SetDetailsComponent implements OnInit {
   @Output()
   stepProgress = new EventEmitter<number>();
 
-  images = ["assets/images/sample-product.png", "assets/images/sample-product.png", ""];
+  images = ["assets/images/sample-product.png", "assets/images/sample-product.png", "", ""];
   dzConfig: DropzoneConfigInterface = environment.config;
 
   nextStep() {
