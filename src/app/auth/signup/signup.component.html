@@ -1,11 +1,11 @@
 <section id="loginSection" class="vertical-flex wrap">
   <a  class="btn-long facebook-btn horizontal-flex justify-evenly">
     <img src="assets/icons/facebook.svg" alt="" class="popup-icon">
-    <h2 class="has-medium-letter-spacing is-regular">Continue With Facebook</h2>
+    <h2 class="has-medium-letter-spacing is-thin">Continue With Facebook</h2>
   </a>
-  <br>
+  <div class="spacer"></div>
   <h3 class="or text-centered is-regular has-medium-letter-spacing">Or signup with email</h3>
-  <br>
+  <div class="spacer is-small"></div>
   <div id="loginForm" class="horizontal-flex">
     <form>
       <fieldset class="material-input">
@@ -25,10 +25,11 @@
       </fieldset>
     </form>
   </div>
-
+  <div class="spacer"></div>
   <a class="btn-long continue-btn horizontal-flex">
-    <h2 class="has-medium-letter-spacing is-regular">Continue</h2>
+    <h2 class="has-medium-letter-spacing is-thin">Continue</h2>
   </a>
-  <br>
+  <div class="spacer is-small"></div>
+  <div class="spacer is-small"></div>
   <a [routerLink]="['/auth', 'login']" class="text-centered no-underline has-medium-letter-spacing" style="font-size: 20px">Have account on Catchtown?<br>Login</a>
 </section>

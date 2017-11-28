@@ -1,11 +1,11 @@
 <div class="wrap">
-  <br>
-  <br>
+  <div class="spacer"></div>
+  <div class="spacer"></div>
   <div class="progress-container">
     <mat-progress-bar mode="determinate" [value]="progressValue"></mat-progress-bar>
   </div>
-  <br>
-  <br>
+  <div class="spacer"></div>
+  <div class="spacer"></div>
   <mat-horizontal-stepper #stepper>
     <mat-step label="Add Cover Photo">
       <app-cover-photo (stepProgress)="nextStep($event)" [stepper]="stepper"></app-cover-photo>
@@ -20,6 +20,6 @@
       <app-list-post (stepProgress)="nextStep($event)" [stepper]="stepper"></app-list-post>
     </mat-step>
   </mat-horizontal-stepper>
-  <br>
-  <br>
+  <div class="spacer"></div>
+  <div class="spacer"></div>
 </div>

@@ -4,11 +4,28 @@
 
 /* General styles */
 
+* {
+  box-sizing: border-box !important;
+  color: #242424;
+}
+
 body, html {
   margin: 0;
   padding: 0;
   position: relative;
   min-height: 100vh;
+}
+
+div.spacer {
+  width: 100%;
+  height: 1px;
+  margin: 20px 0;
+  display: block;
+
+  &.is-small {
+    margin: 8px 0;
+  }
+
 }
 
 app-footer {
@@ -28,7 +45,7 @@ a:not([href]):hover, button:hover {
 
 .wrap {
   width: 100%;
-  max-width: 1200px;
+  max-width: 100vw;
   margin: 0 auto;
 
   &.wrap-tight {
@@ -166,7 +183,12 @@ mat-progress-bar {
     }
 
     .mat-progress-bar-buffer {
-      background: none !important;
+      background: #0076BC !important;
+      border-radius: 5px !important;
+    }
+
+    & .mat-progress-bar-fill, & .mat-progress-bar-fill:after {
+      border-radius: 10px !important;
     }
   }
 }
@@ -255,7 +277,7 @@ fieldset {
   padding-top: 10px;
 
   &.material-input {
-    .bar  { position:relative; display:block; width:300px; }
+    .bar  { position:relative; display:block; width:100%; }
     .bar:before, .bar:after   {
       content:'';
       height:2px;
@@ -301,6 +323,8 @@ input {
 
     &::placeholder {
       letter-spacing: 0.02em;
+      font-size: 20px;
+      font-weight: 300;
     }
 
   }
@@ -515,6 +539,7 @@ div.add-photo div.dropzone {
   width: 400px;
   height: 30px;
   border-radius: 5px;
+  box-sizing: content-box !important;
   box-shadow: 0 2px 7px 0 rgba(0, 0, 0, 0.04);
   font-size: 20px;
   text-align: center;

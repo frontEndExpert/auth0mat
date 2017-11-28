@@ -6,7 +6,7 @@
     padding: 5vmin 0;
   }
 
-  h1, h2, p, a {
+  h1, h2, p, a, li {
     color: #fff;
   }
 
@@ -16,7 +16,7 @@
   }
 
   label.icon {
-    color: #000;
+    color: #242424;
   }
 }
 
@@ -38,10 +38,11 @@
     font-size: 16px;
     color: #1c6899;
     margin: 2px 0;
+    text-transform: uppercase;
   }
 
   img {
-    height: 70px;
+    height: 60px;
     width: auto;
   }
 
@@ -83,16 +84,28 @@ a {
 
 
 .additional-info {
-  padding: 10px 8vmax;
+  padding: 10px 0;
 
   & > .horizontal-flex {
     justify-content: space-between;
 
     .horizontal-flex {
       justify-content: center;
-      flex: 0 0 350px;
+      flex: 0 0 33%;
       margin: 20px auto;
       flex-wrap: nowrap;
+      .info-text {
+        min-height: 108px;
+      }
+
+    }
+
+    .horizontal-flex:first-of-type {
+      margin-left: 0;
+    }
+
+    .horizontal-flex:last-of-type {
+      margin-right: 0;
     }
 
   }
@@ -120,11 +133,12 @@ a {
   }
 
   .info-text {
-    h2, p {
-      margin: 8px 0;
+    h2 {
+      margin: 0;
     }
 
     p {
+      margin: 8px 0;
       letter-spacing: 0.05em;
     }
   }

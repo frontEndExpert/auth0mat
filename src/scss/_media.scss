@@ -66,3 +66,9 @@
     position: fixed;
   }
 }
+
+@media (min-width: 1200px) {
+  .wrap {
+    max-width: 1200px !important;
+  }
+}
