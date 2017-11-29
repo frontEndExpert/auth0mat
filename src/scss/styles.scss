@@ -96,7 +96,7 @@ a:not([href]):hover, button:hover {
 
 .text-centered {
   text-align: center;
-  margin: auto;
+  margin: 0.83em auto;
 }
 
 p, a, input, input::placeholder, h1, h2, h3, h4, h5, h6, li, button {
@@ -614,4 +614,10 @@ div.add-photo div.dropzone {
 /* Stepper */
 .mat-vertical-content {
   padding: 0 !important;
+}
+
+/* Messenger */
+
+messenger-people:last-of-type .container {
+  border-bottom: 1px solid #d8d8d8;
 }
