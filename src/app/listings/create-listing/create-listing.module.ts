@@ -17,6 +17,7 @@ import { ImportProgressComponent } from './import-listing/import-progress/import
 import { PostListedComponent } from './post-listing/post-listed/post-listed.component';
 import { ConnectPostComponent } from './post-listing/connect-post/connect-post.component';
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
+import {ResponsiveModule} from "ng2-responsive";
 
 @NgModule({
   imports: [
@@ -25,7 +26,8 @@ import {FormsModule, ReactiveFormsModule} from "@angular/forms";
     AngularMaterialModule,
     CreateListingRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    ResponsiveModule
   ],
   declarations: [
     ImportListingComponent,

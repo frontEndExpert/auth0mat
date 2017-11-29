@@ -1,10 +1,14 @@
 .sidebar {
-  flex: 0 0 25%;
+  flex: 0 0 30%;
   border-right: 1px solid #d8d8d8;
 }
 
 .main {
-  flex: 0 0 75%;
+  flex: 0 0 70%;
+}
+
+.wrap {
+  width: 986px !important;
 }
 
 .messenger {
@@ -13,6 +17,9 @@
   border: 1px solid #d8d8d8;
   border-radius: 10px;
   position: relative;
+  height: 70vh;
+  width: 90vw;
+  background-color: #fff;
 
   .close-btn {
     position: absolute;

@@ -621,3 +621,21 @@ div.add-photo div.dropzone {
 messenger-people:last-of-type .container {
   border-bottom: 1px solid #d8d8d8;
 }
+
+.messenger .main {
+  position: relative;
+
+  app-message-input {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+}
+
+messenger-people.active .container {
+  background-color: #2980b9;
+  p {
+    color: #fff;
+  }
+}

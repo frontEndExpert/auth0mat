@@ -9,12 +9,15 @@ import {RouterModule} from "@angular/router";
 import {ListingsModule} from "./listings/listings.module";
 import {AuthModule} from "./auth/auth.module";
 import {MessengerModule} from "./messenger/messenger.module";
+import { FromNowPipe } from './global/pipes/from-now.pipe';
+import { DateTimePickerComponent } from './global/date-time-picker/date-time-picker.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    FromNowPipe
   ],
   imports: [
     // Angular Modules
