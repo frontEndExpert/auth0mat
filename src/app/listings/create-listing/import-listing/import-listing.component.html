@@ -4,7 +4,7 @@
       <h1 class="is-roboto is-semibold">Sell Smart Locally.</h1>
       <h1 class="is-medium">Copy Your Craigslist Listing to Catchtown</h1>
       <div class="spacer"></div>
-      <div class="spacer"></div>
+      <div class="spacer" *ngIf="!inProgress"></div>
     </div>
     <app-import-error *ngIf="importError && !inProgress"></app-import-error>
     <div class="horizontal-flex" *ngIf="!inProgress">
@@ -17,9 +17,8 @@
       <button type="button" class="primary-btn is-regular" (click)="importListing()">Continue</button>
     </div>
     <app-import-progress *ngIf="inProgress && !importError" [value]="progressValue"></app-import-progress>
-    <div class="spacer"></div>
+    <div class="spacer is-small"></div>
     <a routerLink="/listings/post" class="no-underline is-medium">Post listing manually</a>
-    <div class="spacer"></div>
     <div class="spacer"></div>
     <div class="tips" [class.is-visible]="importError && !inProgress">
       <div class="horizontal-flex justify-evenly">
