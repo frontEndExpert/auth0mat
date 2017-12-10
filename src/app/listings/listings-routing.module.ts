@@ -1,20 +1,12 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import {ListingDetailsComponent} from "./listing-details/listing-details.component";
+import { ListingDetailsComponent } from "./listing-details/listing-details.component";
 
 const routes: Routes = [
-  {
-    path: '',
-    redirectTo: 'listings/import',
-    pathMatch: 'full'
-  },
-  {
-    path: 'listings',
+  { path: '', redirectTo: 'listings/import', pathMatch: 'full' },
+  { path: 'listings',
     children: [
-      {
-        path: 'details',
-        component: ListingDetailsComponent
-      }
+      { path: 'details', component: ListingDetailsComponent }
     ]
   }
 ];
